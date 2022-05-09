@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="328dp"
+        android:layout_height="800dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05">
+
+        <EditText
+            android:id="@+id/vTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite o valor total gasto"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
+
+        <EditText
+            android:id="@+id/nPessoas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite o número de pessoas"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textColorHint="#757575" />
+
+        <TextView
+            android:id="@+id/lblGorjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gorjeta" />
+
+        <LinearLayout
+            android:layout_width="308dp"
+            android:layout_height="34dp"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/vGorjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="10" />
+
+            <TextView
+                android:id="@+id/lblPercentualGorjeta"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCalcular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular" />
+
+        <TextView
+            android:id="@+id/lblTituloValorRealGorjeta"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="Valor da gorjeta:" />
+
+        <TextView
+            android:id="@+id/lblValorRealGorjeta"
+            android:layout_width="match_parent"
+            android:layout_height="39dp" />
+
+        <TextView
+            android:id="@+id/lblTituloValorRealConta"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="Valor da conta com a gorjeta:" />
+
+        <TextView
+            android:id="@+id/lblValorRealConta"
+            android:layout_width="match_parent"
+            android:layout_height="39dp" />
+
+        <TextView
+            android:id="@+id/lblTituloValorPorPessoa"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="Cada pessoa irá pagar:" />
+
+        <TextView
+            android:id="@+id/lblValorPorPessoa"
+            android:layout_width="match_parent"
+            android:layout_height="39dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
